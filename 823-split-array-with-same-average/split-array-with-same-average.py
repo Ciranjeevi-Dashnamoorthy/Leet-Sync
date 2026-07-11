@@ -59,7 +59,6 @@ class Solution:
         
         for p in poss:
             target=(total*p)//n
-            
             if target in dp[p]:
                
                 return True
