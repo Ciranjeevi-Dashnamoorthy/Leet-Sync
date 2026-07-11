@@ -12,10 +12,7 @@ class Solution:
             degree[v]+=1
 
         
-     
         ct=0
-        
-        
         components=[]
         vis=set()
     
@@ -39,10 +36,7 @@ class Solution:
                         curr.append(nei)
             if curr:
                 components.append(curr)
-        
-        print(components)
-        print(degree)
-        
+    
         for comp in components:
             
             target=len(comp)-1
