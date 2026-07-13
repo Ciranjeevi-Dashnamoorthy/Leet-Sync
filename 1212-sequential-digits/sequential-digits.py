@@ -5,7 +5,7 @@ class Solution:
         res=[]
         s="123456789"
         for i in range(l,r+1):
-            print(i)
+            
             for j in range(0,9-i+1):
                 num=int(s[j:j+i])
                 if low<=num<=high:
