@@ -1,6 +1,10 @@
 class Solution:
     def parseBoolExpr(self,s: str) -> bool:
 
+        """
+        stack
+        """
+
         stack=[]
         n=len(s)
         i=0
@@ -46,9 +50,7 @@ class Solution:
                             ans=1
                 stack.append( "t" if ans else "f")
                 i+=1
-            print(stack)
-            
-        
+                
         return True if stack[-1]=="t" else False
 
                 
