@@ -4,7 +4,7 @@ class Solution:
         p,q=len(word1),len(word2)
         
         s=word1+word2
-        rev=s[::-1]
+        
         n=p+q
 
         dp=[[0]*(n) for _ in range(n)]
