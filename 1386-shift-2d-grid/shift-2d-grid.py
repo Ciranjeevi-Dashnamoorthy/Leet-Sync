@@ -9,7 +9,6 @@ class Solution:
                 
                 new_j=(k+j)%n
                 new_i=(i+(k+j)//n)%m
-                print(new_i,new_j)
                 
                 ans[new_i][new_j]=grid[i][j]
         return ans
