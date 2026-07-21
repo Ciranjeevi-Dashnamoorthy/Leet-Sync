@@ -18,7 +18,7 @@ class Solution:
         if len(ans)<2:
             return one
         val=0
-        print(ans)
+      
         for i in range(len(ans)-1):
             val=max(ans[i]+ans[i+1],val)
             
