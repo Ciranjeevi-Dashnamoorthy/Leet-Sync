@@ -17,7 +17,7 @@ class Solution:
                 d[lab]+=1
                 ans+=-val
                 need-=1
-            
+
         return ans
             
 
