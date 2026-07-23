@@ -21,9 +21,6 @@ class Solution:
                         last=i
                         
         res=[]
-        print(dp,maxi)
-        print(prev,last)
-       
         while last!=-1:
             res.append(nums[last])
             last=prev[last]
