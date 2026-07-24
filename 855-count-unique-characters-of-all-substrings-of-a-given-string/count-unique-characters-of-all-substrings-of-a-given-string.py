@@ -1,5 +1,17 @@
 class Solution:
     def uniqueLetterString(self, s: str) -> int:
+        """
+        for each indixe count the no of substring it presents
+
+        -1 idx1 idx2 n
+
+        for idx1
+        the ct of subarray is 
+        left sum= idx1-(-1)
+        right sum-idx2-idx1
+
+        total ct= left*right 
+        """
 
         from collections import defaultdict
 
