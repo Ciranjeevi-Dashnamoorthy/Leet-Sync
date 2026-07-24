@@ -1,7 +1,7 @@
 class Solution:
     def uniqueLetterString(self, s: str) -> int:
         """
-        for each indixe count the no of substring it presents
+        for each indice count the no of substring it presents
 
         -1 idx1 idx2 n
 
