@@ -1,6 +1,16 @@
 class Solution:
     def minimumMountainRemovals(self, nums: List[int]) -> int:
 
+        """
+        Prodapt Assesment Question
+
+        Calculate LIS in forward and backward 
+        For each index from 1 to n-1
+        iterate and get the max poss mountain we can get and 
+        calculate the deletions
+        
+        """
+
         n=len(nums)
         dp=[1]*n
         for i in range(n):
