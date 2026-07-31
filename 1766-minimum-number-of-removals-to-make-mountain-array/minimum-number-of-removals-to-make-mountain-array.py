@@ -21,9 +21,7 @@ class Solution:
             if dp[i]>1 and dp1[i]>1:
              curr=dp[i]+dp1[i]-1
              s=max(curr,s)
-        print(dp)
-        print(dp1)
-        print(s)
+        
 
         if s<=2:
             return n
