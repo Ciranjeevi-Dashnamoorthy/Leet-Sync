@@ -1,5 +1,19 @@
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
+
+        """
+        Observation:
+
+        the length of the sequence is always increasing in nature
+
+        we iteate from bottom to top
+
+        if current word abcd --> bcd,acd,abd,abc can only be predecessor 
+        so we check for the occurence and the max children they could have 
+        iteratively
+
+        implement it using Hash table with key as word and count as value
+        """
         
         words.sort(key=len)
 
