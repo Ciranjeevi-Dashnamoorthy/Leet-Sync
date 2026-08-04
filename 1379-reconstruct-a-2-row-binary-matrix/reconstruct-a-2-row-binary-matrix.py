@@ -17,11 +17,8 @@ class Solution:
         
         updiff=upper-up
         lowdiff=lower-low
-        if abs(updiff)!=abs(lowdiff) or sum(colsum)!=(upper+lower):
+        if  sum(colsum)!=(upper+lower):
             return []
-      
-        
-
         for i in range(n):
             if updiff>0:
                 diff=min(abs(ans[0][i]-ans[1][i]),updiff)
@@ -39,7 +36,7 @@ class Solution:
                 updiff+=diff
                 ans[1][i]+=diff
                 ans[0][i]-=diff
-            print(updiff,lowdiff)
+            
             if ans[0][i]<0 or ans[1][i]<0:
                     return []
           
