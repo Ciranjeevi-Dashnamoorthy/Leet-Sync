@@ -1,5 +1,9 @@
 class Solution:
     def findMissingElements(self, nums: List[int]) -> List[int]:
+        """
+        When the Random wave of sadness passes and you remember you're actually goated
+        
+        """
         nums.sort()
         s=set(nums)
         m,l=nums[0],nums[-1]
