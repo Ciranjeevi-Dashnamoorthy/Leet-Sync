@@ -10,7 +10,7 @@ class Solution:
         li=[]
         for i in range(m+1,l):
             if i not in s:
-                li.append(int(i))
+                li.append(i)
         return li
         
         
