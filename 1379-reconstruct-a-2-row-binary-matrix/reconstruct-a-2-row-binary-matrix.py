@@ -1,9 +1,12 @@
 class Solution:
     def reconstructMatrix(self, upper: int, lower: int, colsum: List[int]) -> List[List[int]]:
+        """
+        Solved it for any number other than binary matrix , forgot the conditions 
+        
+        """
         n=len(colsum)
         ans=[[0]*n for _ in range(2)]
         up,low=0,0
-
 
         for i in range(n):
 
