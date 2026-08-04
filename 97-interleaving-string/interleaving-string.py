@@ -3,6 +3,8 @@ class Solution:
 
         """
         Observation
+
+        pick or no pick memo
         
         """
 
