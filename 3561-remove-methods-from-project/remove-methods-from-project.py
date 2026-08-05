@@ -1,5 +1,11 @@
 class Solution:
     def remainingMethods(self, n: int, k: int, invocations: List[List[int]]) -> List[int]:
+
+        """
+        Standard BFS
+        if a non -inf method touches a infec method then all the method can be invoked
+        else return only the healthy ones
+        """
         
         adj=[[] for _ in range(n)]
         from collections import deque
