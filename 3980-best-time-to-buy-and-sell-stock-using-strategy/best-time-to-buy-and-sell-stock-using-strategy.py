@@ -2,6 +2,7 @@ class Solution:
     def maxProfit(self, prices: List[int], nums: List[int], k: int) -> int:
 
         """
+    
         Sliding window with minimum doesnt work 
 
         window with best profit doesnt work
@@ -9,6 +10,8 @@ class Solution:
         window with best delta for profits works , how to implemnent it
         precompute the buy and sell
         precompute prices arrays to check for modification delta increase in profit
+
+        Greedy choosing doesnt work explaore all windows..
         """
 
         n=len(prices)
