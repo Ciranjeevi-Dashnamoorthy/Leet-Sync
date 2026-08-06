@@ -12,7 +12,7 @@ class Solution:
 
             if dp[idx][buy]!=float("-inf"):
                 return dp[idx][buy]
-            print(idx,buy)
+           
             
             if buy==1:
                 skip=check(idx+1,buy)
@@ -27,7 +27,7 @@ class Solution:
             return dp[idx][buy]
         
         check(0,1)
-        print(dp)
+    
         return dp[0][1]
         
             
