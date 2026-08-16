@@ -7,9 +7,7 @@ class Solution:
         For any number n in nums, find the n-1 or n+1 in the array
         and add its contribution --> CORE LOGIC
 
-        How do we find its contribution
-
-        any number which is added to the subsequence, its 
+        How do we find its contribution ???
 
         """
         from collections import defaultdict
