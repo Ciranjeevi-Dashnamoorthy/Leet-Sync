@@ -2,9 +2,6 @@ class Solution:
     def largestInteger(self, nums: List[int], k: int) -> int:
 
         n=len(nums)
-        from collections import Counter
-
-       
         if k==n:
             return max(nums)
         
