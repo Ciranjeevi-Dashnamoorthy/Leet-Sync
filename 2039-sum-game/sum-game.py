@@ -36,7 +36,7 @@ class Solution:
                 else:
                     s2+=int(s[i])
         
-        print(m1,m2,s1,s2)
+      
         
         if (m1+m2)%2==1 or (s1-s2)!=((m2-m1)//2)*9:
             return True
