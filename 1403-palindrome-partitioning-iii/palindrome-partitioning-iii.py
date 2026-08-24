@@ -1,5 +1,27 @@
 class Solution:
     def palindromePartition(self, s: str, k: int) -> int:
+        """
+        Observation
+
+        build for every partition upto k , store 
+        use them for k+1 th partition
+
+        Use Partition DP , in general minimize the problem 
+        to core of what they need
+
+        in this one they need minimal changes so we go to some index i
+        for kth partion what is the minimum changes 
+        so how do we get that 
+        precompute the chnges required to make the partiton into plaindrome and 
+        minimize the cahnges
+
+        for example for index 5
+        we have to build  2 partition
+        in this two prtition the cost is what 
+        the cost making this 0 to j , j+1 to i 
+        into palindrome 
+
+        """
 
         n=len(s)
         cost=[[0]*n for _ in range(n)]
