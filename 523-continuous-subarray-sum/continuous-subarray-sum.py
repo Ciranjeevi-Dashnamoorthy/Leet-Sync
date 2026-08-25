@@ -10,8 +10,6 @@ class Solution:
         for i in range(n):
             curr+=nums[i]
             rem=curr%k
-            
-            
             if rem in d:
                 if i-d[rem]>=2:
                  return True
