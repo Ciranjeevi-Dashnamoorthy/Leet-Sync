@@ -1,33 +1,40 @@
 class Solution:
     def shortestBeautifulSubstring(self, s: str, k: int) -> str:
 
-        n=len(s)
-        l=0
-        one=0
-        mini=float("inf")
-        ans="1"*n
-        for r in range(n):
-            if s[r]=="1":
-                one+=1
-            
-            while one>k or (l<n and s[l]=="0"):
-                if s[l]=="1":
-                    one-=1
-                l+=1
+        """
 
-                
-                if one==k and r-l+1<=mini:
-                 
-                 if mini==r-l+1:
-                    ans=min(ans,s[l:r+1])
-                 else:
-                  ans=s[l:r+1]
-                 mini=r-l+1
-            if one==k and r-l+1<mini:
-             mini=r-l+1
-             ans=s[l:r+1]
-            
+        APPROACH 2 
+        COUNT ONES AND POS
+        
+        """
+
+        n=len(s)
+        one=[]
+        for i in range(n):
+            if s[i]=="1":
+                one.append(i)
+    
+        l=0
+        m=len(one)
+        ans="1"*n
+        mini=float("inf")
+
+        for i in range(k-1,m):
+            prev=one[i-k+1]
+            curr=one[i]
+            l=curr-prev+1
+            if l<mini:
+             ans=s[prev:curr+1]
+             mini=l
+            elif l<=mini:
+                ans=min(ans,s[prev:curr+1])
+  
         return ans if mini!=float("inf") else ""
+            
+
+
+
+        
 
 
             
