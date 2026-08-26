@@ -1,6 +1,14 @@
 class Solution:
     def trapRainWater(self, nums: List[List[int]]) -> int:
 
+        """
+        Trapping Water solution doesnt work , as water can spill
+        through gaps
+
+        Use BFS with Min Heap
+        
+        """
+
         n=len(nums)
         m=len(nums[0])
 
