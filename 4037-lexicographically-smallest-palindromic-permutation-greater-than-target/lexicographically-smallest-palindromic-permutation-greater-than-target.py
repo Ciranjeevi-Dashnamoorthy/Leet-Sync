@@ -4,6 +4,10 @@ class Solution:
         """
         Observation:
 
+        similar to yesterdays one , just find the possible arrnagemnt for first n//2 length
+        and create a palindrome
+
+
         for the current index , check we can place the element which equals target
         after placing, check can we generate a larger permutation
 
@@ -32,10 +36,10 @@ class Solution:
             if ct==2:
                 return ""
 
-        for i in range(n):
+        for i in range(n//2+1):
             curr=t[i]
 
-            if d[curr]>1:
+            if d[curr]>=2:
 
                 d[curr]-=2
                 larg=[]
@@ -54,7 +58,7 @@ class Solution:
 
             for idx in range(ord(curr)-ord("a")+1,26):
                 ch=chr(idx+ord("a"))
-                print(ch)
+           
                 if d[ch]>1:
                     d[ch]-=2
                     res.append(ch)
