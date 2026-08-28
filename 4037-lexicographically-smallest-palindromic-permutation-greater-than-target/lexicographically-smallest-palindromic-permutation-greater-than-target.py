@@ -50,7 +50,7 @@ class Solution:
                     continue
                 d[curr]+=2
 
-            print("yes",res,d)
+          
 
             for idx in range(ord(curr)-ord("a")+1,26):
                 ch=chr(idx+ord("a"))
