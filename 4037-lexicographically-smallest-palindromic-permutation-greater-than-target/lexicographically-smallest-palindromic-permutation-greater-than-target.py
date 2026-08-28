@@ -69,15 +69,16 @@ class Solution:
                         if d[ch]>0:
                             small.append((d[ch]//2)*ch)
                     palin="".join(res)+"".join(small)+middle + "".join(small[::-1])+"".join(res[::-1])
-                    if palin>t:
 
-                        return palin
+                    return palin
+            palin="".join(res)+middle+"".join(res[::-1]) 
+            part= 1 if middle!="" else 0
+            if palin>t and len(res)*2+part==n:
+                    return palin
+            else:
+                    return "" 
+                
         
-        palin="".join(res)+middle+"".join(res[::-1]) 
-        part= 1 if middle!="" else 0
-        if palin>t and len(res)*2+part==n:
-            return palin
-        else:
-            return ""           
+                  
 
         
