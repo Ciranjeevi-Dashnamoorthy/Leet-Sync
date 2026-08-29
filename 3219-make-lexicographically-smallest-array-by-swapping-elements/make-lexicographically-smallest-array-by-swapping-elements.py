@@ -8,7 +8,7 @@ class Solution:
         res.sort()
         val=[res[0][0]]
         idx=[res[0][1]]
-        print(res)
+        # print(res)
         
         for i in range(n-1):
             if res[i+1][0]-res[i][0]<=limit:
