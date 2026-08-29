@@ -6,7 +6,7 @@ class Solution:
 
         @cache
         def dfs(r,c):
-            print(r,c)
+            
             if r>=m or c>=n:
                 return 0
             dirs=[(1,0),(0,1),(-1,0),(0,-1)]
