@@ -20,6 +20,6 @@ class Solution:
         ans=0
         for i in range(m):
             for j in range(n):
-                print("yes")
+               
                 ans=(ans+dfs(i,j))%mod
         return ans      
