@@ -1,3 +1,13 @@
+"""
+Can use Lazy Propagation Seg Tree
+
+for range updates from start to end-1
+get the max value for the entire tree root[0]
+
+Overkill for this one 
+
+to avoid getting TLE , we have to use dict as nodes instead of an array
+"""
 from collections import defaultdict
 class MyCalendarThree:
 
