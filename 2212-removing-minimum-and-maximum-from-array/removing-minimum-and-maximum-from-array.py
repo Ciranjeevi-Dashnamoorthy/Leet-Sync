@@ -15,7 +15,8 @@ class Solution:
 
         if idxi>idxm:
             idxm,idxi=idxi,idxm
+            
         ans=min(n-idxi,idxm+1,idxi+1+(n-idxm))
       
-        return 0 if ans<0 else ans 
+        return ans 
         
