@@ -10,6 +10,17 @@ class Solution:
         2) we need r,c as basic state and curr egy and steps to maintain
         3) using bits for litters , why l<=10
 
+        Important 
+
+        instaed of having visisted state like ive visited this one with hokding this litter
+        i maintain states like the maximum energy that i can have for this specific cell
+
+        if a path with high energy than the others is discovered we should add that path to the queue and bfs from it , if it is less the we ignore 
+
+        why this way
+
+        as we have diff poss like we can regian energy the fullest and reduce enrgy as per steps
+
         
         """
         from collections import deque
