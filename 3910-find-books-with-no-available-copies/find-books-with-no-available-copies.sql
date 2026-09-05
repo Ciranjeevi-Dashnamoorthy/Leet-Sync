@@ -1,4 +1,6 @@
-
+-- SUB QUERY
+-- we need the books which are empty at the library
+-- total_copies == count of books that are borrowed --> subquerying on this one
 select b.book_id ,b.title,b.author,b.genre,b.publication_year,b.total_copies as current_borrowers
 from library_books b
 where b.total_copies = (
