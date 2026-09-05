@@ -8,7 +8,6 @@ class Solution:
             if i==le:
                 return ct
            
-            
             noskip=0
             skip=solve(i+1,j,k,ct)
             
