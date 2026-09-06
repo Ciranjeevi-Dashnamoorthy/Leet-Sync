@@ -16,6 +16,6 @@ class Solution:
             else:
                 dp[i]=( 2*dp[i-1]- dp[d[s[i-1]]-1] )%mod
                 d[s[i-1]]=i
-        print(dp)
+       
         return dp[-1]
                         
