@@ -1,10 +1,18 @@
 import bisect
 class Solution:
     def maximumWeight(self, intervals: List[List[int]]) -> List[int]:
+        """
+        Observation:
+        0-1 knapsack 
+        mainatin extra state for pickinh limit upto 4 
+        and get the max poss score for it
+
+        how do we condition the non - overlapping 
+        use binary derach to find the next suitbale index
         
+        """
 
         idx={}
-        
         ct=0
         for l,r,w in intervals:
             if (l,r,w) not in idx:
