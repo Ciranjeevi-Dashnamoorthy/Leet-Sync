@@ -1,5 +1,10 @@
 class Solution:
     def mincostToHireWorkers(self, quality: List[int], wage: List[int], k: int) -> float:
+        """
+        make the ratio as changing condition
+        ratio=wage/quality --> per unit cost
+        ans=(sum of qualities) * max ratio --> as everyone has to be paid similarly
+        """
         import heapq
 
         heap=[]
