@@ -10,10 +10,10 @@ class Solution:
         b2=rec2[1]
         h2=rec2[3]
 
-        # left and right
+      
         if  ( b1>=h2 or h1<=b2):
             return False
-        # top and bottom
+        
         if ( r1<=l2 or l1>=r2):
             return False
 
