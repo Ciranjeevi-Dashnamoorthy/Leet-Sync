@@ -14,7 +14,7 @@ class Solution:
         for i in range(s,st+1):
             if i in d:
                 curr+=d[i]
-        print(curr)
+        
         
         l=st-k
         steps=k//2
@@ -32,8 +32,7 @@ class Solution:
         for i in range(st,st+k+1):
             if i in d:
                 curr+=d[i]
-        print("right")
-        print(curr)
+        
         
         r=st+k
         steps=k//2
@@ -48,7 +47,7 @@ class Solution:
             curr-=d[r-1]
             r-=2
             ans=max(ans,curr)
-        print(ans)
+       
         return ans
 
 
