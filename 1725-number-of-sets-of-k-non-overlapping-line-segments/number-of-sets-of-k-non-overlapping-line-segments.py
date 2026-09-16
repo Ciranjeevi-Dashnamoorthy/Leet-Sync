@@ -16,5 +16,6 @@ class Solution:
             else:
                 ans+=dp(idx,seg-1,True)
             return ans%mod
+            
         return dp(0,k,True)
         
