@@ -19,18 +19,18 @@ class Solution:
                 pref[i]=pref[i-1]-nums[i-1]
         
         maxi_even=0
-        maxi_odd=float("-inf")
+        maxi_odd=pref[1]
         
         mini=float("inf")
 
-        for i in range(1,n+1):
+        for i in range(2,n+1):
 
             if i%2==0:
                 mini=min(mini,pref[i]-maxi_even)
                 maxi_even=max(maxi_even,pref[i])
             else:
-                if maxi_odd!=float("inf"):
-                    mini=min(mini,pref[i]-maxi_odd)
+                
+                mini=min(mini,pref[i]-maxi_odd)
                 maxi_odd=max(maxi_odd,pref[i])
         
         return pref[-1]-2*min(mini,0)
