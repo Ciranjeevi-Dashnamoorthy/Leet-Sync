@@ -1,5 +1,18 @@
 class Solution:
     def resultArray(self, nums: List[int], k: int) -> List[int]:
+        """
+        removing pref and suff points reduces to choosing contigous subarrays 
+        and tracking the contribution that subarray provides to the value x
+
+        define dp[i][k] where i index and k is the rem
+
+        for every values ending eith nums[i] track its new rem
+
+        if prev index leaves value like 1, 2
+        what are the new values can be obtained by adding nums[i] to it 
+        we can multiply nums[i] tp the remainders of the prev index and sdd their contribution
+
+        """
 
         n=len(nums)
 
