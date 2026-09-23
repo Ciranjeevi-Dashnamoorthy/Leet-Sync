@@ -1,6 +1,12 @@
 from collections import defaultdict
 class Solution:
     def minOperations(self, nums: list[int], x: int) -> int:
+        """
+        take some elements of the prefix find the rem and check if the rme 
+        is in the suffix but how can i do it in o(1)
+        prefix+hashing
+        
+        """
 
         n=len(nums)
         first=defaultdict(int)
@@ -33,15 +39,14 @@ class Solution:
         
         curr=0
         i=0
-        print(mini1,mini2)
-        
+    
         while curr<x:
             curr+=nums[i]
             if x-curr in last:
-                print(curr,i)
+                
                 mini2=min(mini2,n-i+1+last[x-curr])
             i+=1
-        print(mini1,mini2)
+    
         ans=min(mini1,mini2)   
         if ans!=float("inf"):
             return ans
