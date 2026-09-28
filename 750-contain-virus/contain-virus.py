@@ -1,6 +1,12 @@
 class Solution:
     def containVirus(self, grid: list[list[int]]) -> int:
 
+        """
+        split the regionbs find the most affecting regions
+        block it and spread it for other region
+        
+        """
+
         m,n=len(grid),len(grid[0])
 
         dirs=[(0,1),(1,0),(-1,0),(0,-1)]
