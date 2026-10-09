@@ -26,10 +26,9 @@ class Solution:
                 seats+=1
 
                 if seats>=3 and seats%2==1:
-                    print(seats,prev,i)
                     ans=(ans*(i-prev))%mod
                 prev=i
-        print(seats)
+        
         if seats<2 or seats%2==1:
             return 0
         return ans 
