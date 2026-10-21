@@ -5,7 +5,7 @@ class Solution:
         n=len(s)
         first=order[0]
         last=order[-1]
-        print(order,s)
+        
         if "".join(order)==s:
             return 0
         if n==2 and last==s[0] and first==s[-1]:
