@@ -9,23 +9,24 @@ class Solution:
             d=defaultdict(int)
             occ=defaultdict(int)
             ct=1
+            satis=0
             
             for j in range(i,n):
                 val=nums[j]
                 if d[val]==0:
                     d[val]=ct
                     ct+=1
-                occ[d[val]]+=1
-               
-                fl=True
-               
-                for k in range(ct):
-                    if occ[k]!=k:
-                        fl=False
-                        break
-                if fl:
+                occ[val]+=1
+                if occ[val]>d[val]:
+                    satis-=1
+                    break
+                if occ[val]==d[val]:
+                    satis+=1
+                
+                
+                if satis==ct-1:
                     ans+=1
-
+                
                     
         return ans
 
