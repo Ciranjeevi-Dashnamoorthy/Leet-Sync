@@ -19,7 +19,7 @@ class Solution:
                 if nei not in vis:
                     dfs(nei)
         groups=[] 
-        print(arr)
+        
         for i in range(n):
             node=arr[i]
             group=[]
