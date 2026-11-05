@@ -35,9 +35,11 @@ class Solution:
         for i in range(1,s//2+1):
             if s%i==0:
                 val=find(i)
-                maxi=max(maxi,val)
+                if val!=0:
+                    return val
+        return 0
                     
-        return maxi
+        
                 
 
         
