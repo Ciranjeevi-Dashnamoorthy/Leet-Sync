@@ -32,7 +32,7 @@ class Solution:
                 
         
         
-        for i in range(1,s//2+1):
+        for i in range(max(nums),s//2+1):
             if s%i==0:
                 val=find(i)
                 if val!=0:
