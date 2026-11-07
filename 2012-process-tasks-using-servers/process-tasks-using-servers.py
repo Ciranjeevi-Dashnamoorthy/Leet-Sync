@@ -2,6 +2,9 @@ class Solution:
     def assignTasks(self, servers: list[int], tasks: list[int]) -> list[int]:
 
         """
+        cant do with a single heap, so do with two heaps 
+        one to maintain free and busy , push and pop with suitbale conditis
+
         """
         
         import heapq
