@@ -2,6 +2,10 @@ from collections import deque
 class Solution:
     def minimumObstacles(self, grid: list[list[int]]) -> int:
 
+        """
+        DO WITH 0-1 BFS
+        """
+
         heap=[(0,0,0)]
         vis=set((0,0))
         m,n=len(grid),len(grid[0])
