@@ -3,34 +3,27 @@ class Solution:
 
         n=len(nums)
         nums1=nums[::]
-        op1=0
+        ops1=0
         for i in range(n-1):
             if nums1[i]>nums1[i+1]:
-                nums1[i]=nums1[i+1]
-                op1+=1
-        print(op1)
-        print(nums)
-        fl=True
-        for i in range(n-1):
-            if nums1[i]>nums1[i+1]:
-                fl=False
-                break 
-        if fl and op1<=1:
-            return True
-        fl=True 
-        op2=0
-        for i in range(n-1,-0,-1):
-            if nums[i]<nums[i-1]:
-                nums[i]=nums[i-1]
-                op2+=1
+                nums1[i+1]=nums1[i]
+                ops1+=1
         
-        for i in range(n-1):
-            if nums[i]>nums[i+1]:
-                fl=False 
-                break 
-        if fl and op2<=1:
-            return  True 
-        return False
+        ops2=0
+        for i in range(n-1,0,-1):
+            if nums[i]<nums[i-1]:
+                nums[i-1]=nums[i]
+                ops2+=1
+            if i<n-1:
+                if nums[i]>nums[i+1]:
+                    ops2+=1
+        print(ops1,ops2)
+        if ops1<=1 or ops2<=1:
+            return True 
+        else:
+            return False
 
+
+            
 
         
