@@ -9,6 +9,7 @@ class Solution:
                 nums1[i+1]=nums1[i]
                 ops1+=1
         
+        
         ops2=0
         for i in range(n-1,0,-1):
             if nums[i]<nums[i-1]:
@@ -17,7 +18,7 @@ class Solution:
             if i<n-1:
                 if nums[i]>nums[i+1]:
                     ops2+=1
-        print(ops1,ops2)
+        
         if ops1<=1 or ops2<=1:
             return True 
         else:
