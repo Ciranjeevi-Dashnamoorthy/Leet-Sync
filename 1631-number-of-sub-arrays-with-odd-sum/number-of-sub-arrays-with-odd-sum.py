@@ -1,13 +1,19 @@
 class Solution:
     def numOfSubarrays(self, arr):
-        res, even, odd, mod = 0, 0, 0, 10**9 + 7
 
-        for i in range(len(arr) - 1, -1, -1):  # Iterate from the end to the beginning
-            if arr[i] % 2 == 1:  # Odd number
-                even, odd = odd, (even + 1) % mod
-            else:  # Even number
-                even = (even + 1) % mod
-            
-            res = (res + odd) % mod
-        
-        return res
+        n=len(arr)
+        odd=0
+        even=1
+        ans=0
+        mod=10**9 + 7
+        curr=0
+
+        for i in range(n):
+            curr+=arr[i]
+            if curr%2==1:
+                ans=(ans+even)%mod
+                odd+=1
+            else:
+                ans=(ans+odd)%mod
+                even+=1
+        return ans
